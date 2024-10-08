@@ -1,0 +1,221 @@
+@font-face {
+    font-family: "norse";
+    src:
+      url("./signupPageAssets/fonts/norse-bold-webfont.woff2") format("woff2"),
+      url("./signupPageAssets/fonts/norse-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.image-section {
+    position: relative;
+    flex: 2;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.logo {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(15, 14, 14, 0.5);
+    position: absolute;
+    top: 12rem;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credits {
+    position: absolute;
+    bottom: 0.25rem;
+    left: 30%;
+    color: white;
+}
+
+.credits > a {
+    color: white;
+}
+
+.logo > img {
+    max-height: 80%;
+} 
+
+span {
+    color: white;
+    font-family: "norse";
+    font-size: 8rem;
+}
+
+
+.form-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: whitesmoke;
+   }
+
+.content {
+    flex: 1;
+}
+
+.content {
+    margin-top: 10rem;
+    margin-left: 5rem;
+    width: 80%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.content > div > p:last-child {
+    margin-top: 1.5rem;
+}
+
+.form {
+    flex: 1;
+    background-color: white;
+    box-shadow: 0 3px 6px gray;
+    padding-bottom: 2rem;
+}
+
+.button {
+    flex: 1;
+}
+
+h1, 
+button, 
+.login {
+    margin-top: 1.5rem;
+    margin-left: 5rem;
+}
+
+.form-inputs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+.form-inputs > div {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.2rem;
+}
+
+button{
+    width: 12rem;
+    height: 3rem;
+    padding: 5px 10px;
+    background-color: #596D48;
+    border: 3px solid currentColor;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.login {
+    font-size: 1.2rem;;
+}
+
+label {
+    letter-spacing: 0.1rem;
+}
+
+input {
+    appearance: none;
+    border: 0.15rem solid #E5E7EB;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0 0.15rem;
+}
+
+input:valid:focus,
+input:required:invalid:focus {
+    outline: none;
+    border: 1px solid blue;
+    border-radius: 0.4rem;
+    box-shadow: 2px 2px 4px gray;
+}
+
+
+input:required:invalid {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+}
+
+
+input:valid {
+    outline: none;
+    border: 2px solid #596D48;
+    border-radius: 0.4rem;
+}
+
+input:invalid {
+    outline: none;
+    border: 1px solid red;
+    border-radius: 0.4rem;
+}
+
+div:has(input:required) > label::after {
+    content: " (required)";
+    font-size: 0.8rem;
+    color: black;
+
+}
+input[type="text"]:invalid~p::after {
+    content: "*Please enter valid text";
+    font-size: 1rem;
+    color: red;
+}
+
+input[type="email"]:invalid~p::after {
+    content: "*Please enter a valid email";
+    font-size: 1rem;
+    color: red;
+}
+
+input[type="tel"]:invalid~p::after {
+    content: "*Please enter the 10 digit number in the required format";
+    font-size: 1rem;
+    color: red;
+}
+
+input[type="password"]:invalid~p::after {
+    content: "*Please enter the password in the required format";
+    font-size: 1rem;
+    color: red;
+}
+
